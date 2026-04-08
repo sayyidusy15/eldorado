@@ -9,7 +9,8 @@ import {
   Type, 
   Layers, 
   Code2, 
-  Settings2 
+  Settings2,
+  Sparkles
 } from "lucide-react";
 
 /**
@@ -24,6 +25,7 @@ export function DocSidebar() {
       title: "Getting Started",
       items: [
         { label: "Introduction", href: "/documentation", icon: BookOpen },
+        { label: "Skill Tree", href: "/documentation/skill-tree", icon: Sparkles },
         { label: "Project Structure", href: "/documentation/structure", icon: Layers },
       ]
     },
