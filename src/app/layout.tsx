@@ -5,37 +5,37 @@ import "./globals.css";
 const motivaSans = localFont({
   src: [
     {
-      path: "../fonts/MotivaSansThin.ttf",
+      path: "../../public/assets/fonts/MotivaSansThin.ttf",
       weight: "100",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansLight.woff.ttf",
+      path: "../../public/assets/fonts/MotivaSansLight.woff.ttf",
       weight: "300",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansRegular.woff.ttf",
+      path: "../../public/assets/fonts/MotivaSansRegular.woff.ttf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansMedium.woff.ttf",
+      path: "../../public/assets/fonts/MotivaSansMedium.woff.ttf",
       weight: "500",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansBold.woff.ttf",
+      path: "../../public/assets/fonts/MotivaSansBold.woff.ttf",
       weight: "700",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansExtraBold.ttf",
+      path: "../../public/assets/fonts/MotivaSansExtraBold.ttf",
       weight: "800",
       style: "normal",
     },
     {
-      path: "../fonts/MotivaSansBlack.woff.ttf",
+      path: "../../public/assets/fonts/MotivaSansBlack.woff.ttf",
       weight: "900",
       style: "normal",
     },

@@ -88,6 +88,10 @@ export default function DesignSystemPage() {
             <p className="text-xs text-muted-foreground font-mono">--gpGradient-LibraryBackground</p>
             <div className="h-32 rounded-xl border border-border/50" style={{ backgroundImage: "var(--gpGradient-LibraryBackground)" }} />
           </div>
+          <div className="space-y-3 md:col-span-2">
+            <p className="text-xs text-muted-foreground font-mono">Landing Page Gradient (-14deg, Tertiary to Main)</p>
+            <div className="h-32 rounded-xl border border-border/50" style={{ background: "linear-gradient(-14deg, var(--uiBg-Tertiary) 0%, var(--uiBg-Main) 100%)" }} />
+          </div>
         </div>
       </section>
     </div>

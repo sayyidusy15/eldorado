@@ -57,8 +57,8 @@ export default function FontsPage() {
 {`// src/app/layout.tsx
 const motivaSans = localFont({
   src: [
-    { path: "../fonts/MotivaSansRegular.woff.ttf", weight: "400" },
-    { path: "../fonts/MotivaSansBold.woff.ttf", weight: "700" },
+    { path: "../../public/assets/fonts/MotivaSansRegular.woff.ttf", weight: "400" },
+    { path: "../../public/assets/fonts/MotivaSansBold.woff.ttf", weight: "700" },
     // ... lainnya
   ],
   variable: "--font-motiva-sans",
