@@ -34,6 +34,23 @@
   --gpColor-Yellow: #FFC82C;
   --gpColor-ChalkyBlue: #66C0F4;
 
+  /* --- COMPONENT BASE COLORS --- */
+  --uiText-Main: #F3F3F3;
+  --uiText-Dim: #76808C;
+  
+  --uiBg-Main: #0E141B;
+  --uiBg-Highlight: #1E2329;
+  --uiBg-Hover: #313843;
+  --uiBg-Secondary: #14344B;
+  --uiBg-Tertiary: #212B45;
+  
+  --uiColor-Primary: #66C0F4;
+  --uiColor-Secondary: #4B619B;
+  
+  --uiAccent-Green: #A1CD44;
+  --uiAccent-Red: #CD5444;
+  --uiAccent-Yellow: #C1B15F;
+
   /* Backgrounds & Opacities */
   --gpBackground-LightSofter: #6998bb24;
   --gpBackground-LightSoft: #3b5a7280;
@@ -57,26 +74,26 @@
   --gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
 
   /* --- UI MAPPING (Tailwind Compatibility) --- */
-  --background: var(--gpStoreDarkerGrey);
-  --foreground: var(--gpSystemLightestGrey);
+  --background: var(--uiBg-Main);
+  --foreground: var(--uiText-Main);
 
-  --primary: var(--gpColor-Blue);
-  --primary-foreground: #ffffff;
+  --primary: var(--uiColor-Primary);
+  --primary-foreground: var(--uiBg-Main);
   
-  --secondary: var(--gpStoreDarkGrey);
-  --secondary-foreground: var(--gpStoreLightestGrey);
+  --secondary: var(--uiBg-Secondary);
+  --secondary-foreground: var(--uiText-Main);
 
-  --card: var(--gpStoreDarkGrey);
-  --card-foreground: var(--gpSystemLightestGrey);
+  --card: var(--uiBg-Secondary);
+  --card-foreground: var(--uiText-Main);
 
   --border: var(--gpStoreGrey);
-  --ring: var(--gpColor-BlueHi);
+  --ring: var(--uiColor-Primary);
 
-  --destructive: var(--gpColor-Red);
+  --destructive: var(--uiAccent-Red);
   --destructive-foreground: #ffffff;
 
-  --muted: var(--gpSystemDarkerGrey);
-  --muted-foreground: var(--gpSystemLightGrey);
+  --muted: var(--uiBg-Highlight);
+  --muted-foreground: var(--uiText-Dim);
   
   --radius: 0.5rem;
 }
@@ -113,6 +130,23 @@
   --color-gp-store-dark: var(--gpStoreDarkGrey);
   --color-gp-store-darker: var(--gpStoreDarkerGrey);
   --color-gp-store-darkest: var(--gpStoreDarkestGrey);
+
+  /* New Component Base UI palette */
+  --color-ui-bg-main: var(--uiBg-Main);
+  --color-ui-bg-highlight: var(--uiBg-Highlight);
+  --color-ui-bg-hover: var(--uiBg-Hover);
+  --color-ui-bg-secondary: var(--uiBg-Secondary);
+  --color-ui-bg-tertiary: var(--uiBg-Tertiary);
+  
+  --color-ui-text-main: var(--uiText-Main);
+  --color-ui-text-dim: var(--uiText-Dim);
+  
+  --color-ui-primary: var(--uiColor-Primary);
+  --color-ui-secondary: var(--uiColor-Secondary);
+  
+  --color-ui-accent-green: var(--uiAccent-Green);
+  --color-ui-accent-red: var(--uiAccent-Red);
+  --color-ui-accent-yellow: var(--uiAccent-Yellow);
 
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);

@@ -4,35 +4,38 @@
 export default function DesignSystemPage() {
   const sections = [
     {
+      title: "Component Base UI",
+      description: "Warna spesifik untuk komponen, state (hover/highlight), dan elemen antarmuka.",
+      colors: [
+        { name: "Bg Main", var: "--uiBg-Main", hex: "#0E141B" },
+        { name: "Bg Highlight", var: "--uiBg-Highlight", hex: "#1E2329" },
+        { name: "Bg Hover", var: "--uiBg-Hover", hex: "#313843" },
+        { name: "Bg Secondary", var: "--uiBg-Secondary", hex: "#14344B" },
+        { name: "Bg Tertiary", var: "--uiBg-Tertiary", hex: "#212B45" },
+        { name: "Text Main", var: "--uiText-Main", hex: "#F3F3F3" },
+        { name: "Text Dim", var: "--uiText-Dim", hex: "#76808C" },
+      ]
+    },
+    {
+      title: "Component Accents",
+      description: "Warna aksen untuk status dan elemen interaktif di dalam komponen.",
+      colors: [
+        { name: "Primary UI", var: "--uiColor-Primary", hex: "#66C0F4" },
+        { name: "Secondary UI", var: "--uiColor-Secondary", hex: "#4B619B" },
+        { name: "Accent Green", var: "--uiAccent-Green", hex: "#A1CD44" },
+        { name: "Accent Red", var: "--uiAccent-Red", hex: "#CD5444" },
+        { name: "Accent Yellow", var: "--uiAccent-Yellow", hex: "#C1B15F" },
+      ]
+    },
+    {
       title: "Store Blue Greys",
-      description: "Warna pallet utama untuk tema toko/store.",
+      description: "Warna pallet tambahan untuk tema toko/store.",
       colors: [
         { name: "Store Darkest", var: "--gpStoreDarkestGrey", hex: "#000F18" },
         { name: "Store Darker", var: "--gpStoreDarkerGrey", hex: "#1B2838" },
         { name: "Store Dark", var: "--gpStoreDarkGrey", hex: "#2A475E" },
         { name: "Store Grey", var: "--gpStoreGrey", hex: "#4e697d" },
         { name: "Store Lightest", var: "--gpStoreLightestGrey", hex: "#CCD8E3" },
-      ]
-    },
-    {
-      title: "System Greys",
-      description: "Warna pallet abu-abu netral untuk elemen UI sistem.",
-      colors: [
-        { name: "System Darkest", var: "--gpSystemDarkestGrey", hex: "#0E141B" },
-        { name: "System Darker", var: "--gpSystemDarkerGrey", hex: "#23262E" },
-        { name: "System Dark", var: "--gpSystemDarkGrey", hex: "#3D4450" },
-        { name: "System Lightest", var: "--gpSystemLightestGrey", hex: "#DCDEDF" },
-      ]
-    },
-    {
-      title: "Brand Colors",
-      description: "Warna aksen untuk status, tombol, dan highlight.",
-      colors: [
-        { name: "GP Blue", var: "--gpColor-Blue", hex: "#1A9FFF" },
-        { name: "GP Blue Hi", var: "--gpColor-BlueHi", hex: "#00BBFF" },
-        { name: "GP Green", var: "--gpColor-Green", hex: "#5ba32b" },
-        { name: "GP Orange", var: "--gpColor-Orange", hex: "#E35E1C" },
-        { name: "GP Red", var: "--gpColor-Red", hex: "#D94126" },
       ]
     }
   ];
