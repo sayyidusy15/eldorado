@@ -1,17 +1,46 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import localFont from "next/font/local";
 import "./globals.css";
-import { Navbar } from "@/components/layout/Navbar";
-import { Footer } from "@/components/layout/Footer";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const motivaSans = localFont({
+  src: [
+    {
+      path: "../fonts/MotivaSansThin.ttf",
+      weight: "100",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansLight.woff.ttf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansRegular.woff.ttf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansMedium.woff.ttf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansBold.woff.ttf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansExtraBold.ttf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../fonts/MotivaSansBlack.woff.ttf",
+      weight: "900",
+      style: "normal",
+    },
+  ],
+  variable: "--font-motiva-sans",
 });
 
 export const metadata: Metadata = {
@@ -26,12 +55,10 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="id">
-      <body className={`${geistSans.variable} ${geistMono.variable} antialiased min-h-screen flex flex-col`}>
-        <Navbar />
+      <body className={`${motivaSans.variable} font-sans antialiased min-h-screen flex flex-col`}>
         <main className="flex-1 flex flex-col">
           {children}
         </main>
-        <Footer />
       </body>
     </html>
   );
