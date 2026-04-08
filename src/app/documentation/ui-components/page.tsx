@@ -1,4 +1,7 @@
 import { Button } from "@/components/ui/button";
+import { Switch } from "@/components/ui/switch";
+import { Checkbox } from "@/components/ui/checkbox";
+import { ReviewProgress } from "@/components/ui/progress-review";
 import { Play, Download, Pause, ShoppingCart, Heart } from "lucide-react";
 
 /**
@@ -83,6 +86,57 @@ export default function UIComponentsPage() {
                 <Button variant="gp-tertiary" size="lg" className="px-10 font-bold">
                   <Pause className="w-4 h-4 mr-2 fill-current" /> Pause
                 </Button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Data Input & Feedback */}
+      <section className="space-y-8">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-bold tracking-tight">Form & Feedback</h2>
+          <p className="text-muted-foreground text-sm">Komponen untuk input data dan feedback visual kepada pengguna.</p>
+        </div>
+
+        <div className="grid gap-12 md:grid-cols-2">
+          {/* Toggle & Checkbox */}
+          <div className="space-y-6">
+            <div className="p-8 rounded-2xl bg-secondary/5 border border-border/50 space-y-8">
+              <div className="flex items-center justify-between gap-8">
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold">Switch / Toggle</h4>
+                  <p className="text-xs text-muted-foreground">Status Aktif/Non-aktif</p>
+                </div>
+                <div className="flex gap-4">
+                  <Switch defaultChecked />
+                  <Switch />
+                </div>
+              </div>
+
+              <div className="flex items-center justify-between gap-8">
+                <div className="space-y-1">
+                  <h4 className="text-sm font-bold">Checkbox</h4>
+                  <p className="text-xs text-muted-foreground">Pilihan item atau batch</p>
+                </div>
+                <div className="flex gap-4">
+                  <Checkbox />
+                  <Checkbox defaultChecked />
+                </div>
+              </div>
+            </div>
+          </div>
+
+          {/* Review Progress */}
+          <div className="space-y-6">
+            <div className="p-8 rounded-2xl bg-secondary/5 border border-border/50 space-y-8">
+              <div className="space-y-4">
+                <h4 className="text-sm font-bold">Review Sentiment Bar</h4>
+                <div className="space-y-6">
+                  <ReviewProgress positive={90} negative={10} />
+                  <ReviewProgress positive={50} negative={50} />
+                  <ReviewProgress positive={20} negative={80} />
+                </div>
               </div>
             </div>
           </div>
