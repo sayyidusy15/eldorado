@@ -2,11 +2,18 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ReviewProgress } from "@/components/ui/progress-review";
-import { Play, Download, Pause, ShoppingCart, Heart } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faPlay, 
+  faDownload, 
+  faPause, 
+  faShoppingCart, 
+  faHeart 
+} from "@fortawesome/free-solid-svg-icons";
 
 /**
- * Halaman dokumentasi UI Components (Buttons).
- * Menampilkan variasi tombol dengan gaya Steam/GP.
+ * Halaman dokumentasi UI Components (Buttons & More).
+ * Menampilkan variasi komponen dengan gaya Steam/GP dan Font Awesome icons.
  */
 export default function UIComponentsPage() {
   return (
@@ -14,8 +21,8 @@ export default function UIComponentsPage() {
       <section>
         <h1 className="text-4xl font-extrabold tracking-tight mb-4">UI Components</h1>
         <p className="text-muted-foreground text-lg max-w-3xl border-l-4 border-primary pl-6 py-2">
-          Kumpulan komponen antarmuka yang siap digunakan. Semua komponen telah disesuaikan dengan 
-          sistem desain Gaming Platform premium.
+          Kumpulan komponen antarmuka menggunakan **Font Awesome 6**. 
+          Semua komponen telah disesuaikan dengan sistem desain Gaming Platform premium.
         </p>
       </section>
 
@@ -34,32 +41,13 @@ export default function UIComponentsPage() {
               <div className="space-y-3">
                 <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-primary"</span>
                 <Button variant="gp-primary" className="w-48">
-                  <ShoppingCart className="w-4 h-4 mr-2" /> Add to Cart
+                  <FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 mr-2" /> Add to Cart
                 </Button>
               </div>
               <div className="space-y-3">
                 <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-action"</span>
                 <Button variant="gp-action" className="w-48">
-                  <ShoppingCart className="w-4 h-4 mr-2" /> Add to Cart
-                </Button>
-              </div>
-            </div>
-          </div>
-
-          {/* Secondary / Ghost Buttons */}
-          <div className="space-y-4">
-            <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/50">Secondary & States</h3>
-            <div className="flex flex-wrap gap-4 p-8 rounded-2xl bg-secondary/5 border border-border/50">
-              <div className="space-y-3">
-                <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-ghost" (Normal)</span>
-                <Button variant="gp-ghost" className="w-48 justify-start">
-                  <Heart className="w-4 h-4 mr-2" /> Add to Wishlist
-                </Button>
-              </div>
-              <div className="space-y-3">
-                <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-tertiary" (Darker)</span>
-                <Button variant="gp-tertiary" className="w-48 justify-start">
-                  <Heart className="w-4 h-4 mr-2" /> Add to Wishlist
+                  <FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 mr-2" /> Add to Cart
                 </Button>
               </div>
             </div>
@@ -72,19 +60,13 @@ export default function UIComponentsPage() {
               <div className="space-y-3">
                 <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-purchase"</span>
                 <Button variant="gp-purchase" size="lg" className="px-10">
-                  <Play className="w-4 h-4 mr-2 fill-current" /> Play
+                  <FontAwesomeIcon icon={faPlay} className="w-4 h-4 mr-2" /> Play
                 </Button>
               </div>
               <div className="space-y-3">
-                <span className="text-[10px] uppercase text-muted-foreground block">Install (using gp-primary)</span>
+                <span className="text-[10px] uppercase text-muted-foreground block">Install</span>
                 <Button variant="gp-primary" size="lg" className="px-10">
-                  <Download className="w-4 h-4 mr-2" /> Install
-                </Button>
-              </div>
-              <div className="space-y-3">
-                <span className="text-[10px] uppercase text-muted-foreground block">Pause (using gp-tertiary)</span>
-                <Button variant="gp-tertiary" size="lg" className="px-10 font-bold">
-                  <Pause className="w-4 h-4 mr-2 fill-current" /> Pause
+                  <FontAwesomeIcon icon={faDownload} className="w-4 h-4 mr-2" /> Install
                 </Button>
               </div>
             </div>
@@ -96,7 +78,7 @@ export default function UIComponentsPage() {
       <section className="space-y-8">
         <div className="space-y-1">
           <h2 className="text-2xl font-bold tracking-tight">Form & Feedback</h2>
-          <p className="text-muted-foreground text-sm">Komponen untuk input data dan feedback visual kepada pengguna.</p>
+          <p className="text-muted-foreground text-sm">Komponen untuk input data dan feedback visual menggunakan Font Awesome.</p>
         </div>
 
         <div className="grid gap-12 md:grid-cols-2">
@@ -133,9 +115,7 @@ export default function UIComponentsPage() {
               <div className="space-y-4">
                 <h4 className="text-sm font-bold">Review Sentiment Bar</h4>
                 <div className="space-y-6">
-                  <ReviewProgress positive={90} negative={10} />
-                  <ReviewProgress positive={50} negative={50} />
-                  <ReviewProgress positive={20} negative={80} />
+                  <ReviewProgress positive={85} negative={15} />
                 </div>
               </div>
             </div>
@@ -145,15 +125,15 @@ export default function UIComponentsPage() {
 
       {/* Code Usage */}
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">Usage</h2>
-        <div className="p-6 rounded-xl bg-ui-bg-tertiary border border-border/50 font-mono text-sm">
+        <h2 className="text-2xl font-bold">Usage (Font Awesome 6)</h2>
+        <div className="p-6 rounded-xl bg-ui-bg-tertiary border border-border/50 font-mono text-sm leading-relaxed">
           <pre className="text-blue-300">
-{`<Button variant="gp-primary">
-  Add to Cart
-</Button>
+{`import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";
 
-<Button variant="gp-purchase">
-  Play Now
+<Button variant="gp-primary">
+  <FontAwesomeIcon icon={faShoppingCart} className="mr-2" />
+  Add to Cart
 </Button>`}
           </pre>
         </div>

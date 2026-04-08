@@ -2,7 +2,8 @@
 
 import * as React from "react";
 import { cn } from "@/lib/utils";
-import { ThumbsUp, ThumbsDown } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faThumbsUp, faThumbsDown } from "@fortawesome/free-solid-svg-icons";
 
 interface ReviewProgressProps {
   positive: number;
@@ -11,7 +12,7 @@ interface ReviewProgressProps {
 }
 
 /**
- * Progress bar untuk review (Blue=Positive, Red=Negative) sesuai gaya Steam.
+ * Progress bar untuk review (Blue=Positive, Red=Negative) menggunakan FontAwesome.
  */
 export function ReviewProgress({ positive, negative, className }: ReviewProgressProps) {
   const total = positive + negative;
@@ -23,11 +24,11 @@ export function ReviewProgress({ positive, negative, className }: ReviewProgress
       <div className="flex justify-between items-center text-[10px] font-bold tracking-wider uppercase">
         <div className="flex items-center gap-1.5 text-ui-primary">
           <span>{positive}%</span>
-          <ThumbsUp className="w-3 h-3" />
+          <FontAwesomeIcon icon={faThumbsUp} className="w-3 h-3" />
         </div>
         <div className="flex items-center gap-1.5 text-ui-accent-red">
           <span>{negative}%</span>
-          <ThumbsDown className="w-3 h-3" />
+          <FontAwesomeIcon icon={faThumbsDown} className="w-3 h-3" />
         </div>
       </div>
       

@@ -3,7 +3,14 @@ import { Button } from "@/components/ui/button";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ReviewProgress } from "@/components/ui/progress-review";
-import { Play, Download, ShoppingCart, Heart, Activity } from "lucide-react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { 
+  faPlay, 
+  faDownload, 
+  faShoppingCart, 
+  faHeart, 
+  faChartLine 
+} from "@fortawesome/free-solid-svg-icons";
 
 export default function Home() {
   return (
@@ -28,7 +35,7 @@ export default function Home() {
       <div className="relative z-10 animate-in fade-in zoom-in duration-1000 max-w-4xl w-full">
         <div className="flex flex-col items-center mb-12">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-ui-primary/10 border border-ui-primary/20 text-ui-primary text-[10px] font-bold uppercase tracking-widest mb-6">
-            <Activity className="w-3 h-3" /> System Ready
+            <FontAwesomeIcon icon={faChartLine} className="w-3 h-3" /> System Ready
           </div>
           
           <h1 className="text-7xl font-black tracking-tighter text-ui-text-main mb-4 leading-none">
@@ -36,7 +43,7 @@ export default function Home() {
           </h1>
           
           <p className="text-ui-text-dim text-lg mb-10 leading-relaxed font-medium max-w-xl">
-            Sistem komponen Steam-inspired telah siap. Dari tombol premium hingga progress bar interaktif untuk marketplace gaming Anda.
+            Sistem komponen telah dimigrasi ke **Font Awesome**. Ikon yang solid dan konsisten untuk pengalaman gaming terbaik.
           </p>
         </div>
         
@@ -47,17 +54,17 @@ export default function Home() {
             <h3 className="text-xs font-bold uppercase tracking-widest text-ui-primary/50 mb-4">Core Actions</h3>
             <div className="flex flex-col gap-3">
               <Button variant="gp-primary" size="lg">
-                <Download className="w-4 h-4 mr-2" /> Install Game
+                <FontAwesomeIcon icon={faDownload} className="w-4 h-4 mr-2" /> Install Game
               </Button>
               <Button variant="gp-purchase" size="lg">
-                <Play className="w-4 h-4 mr-2 fill-current" /> Play Now
+                <FontAwesomeIcon icon={faPlay} className="w-4 h-4 mr-2" /> Play Now
               </Button>
               <div className="grid grid-cols-2 gap-3">
                 <Button variant="gp-ghost">
-                  <Heart className="w-4 h-4 mr-2" /> Wishlist
+                  <FontAwesomeIcon icon={faHeart} className="w-4 h-4 mr-2" /> Wishlist
                 </Button>
                 <Button variant="gp-action">
-                   <ShoppingCart className="w-4 h-4 mr-2" /> Cart
+                   <FontAwesomeIcon icon={faShoppingCart} className="w-4 h-4 mr-2" /> Cart
                 </Button>
               </div>
             </div>
