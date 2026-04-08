@@ -1,26 +1,60 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dark mode by default for gaming marketplace */
+  --background: #0b0f19; /* Very dark blue, almost black */
+  --foreground: #e2e8f0; /* slate-200 */
+
+  /* Theme Colors (Steam/Eldorado inspired) */
+  --primary: #3b82f6; /* bright blue */
+  --primary-foreground: #ffffff;
+  
+  --secondary: #1e293b; /* slate-800 - for inputs/secondary buttons */
+  --secondary-foreground: #f8fafc; /* slate-50 */
+
+  --card: #151e2f; /* slightly lighter dark blue */
+  --card-foreground: #e2e8f0;
+
+  --border: #1e293b; /* slate-800 */
+  --ring: #3b82f6;
+
+  --destructive: #ef4444; /* red-500 */
+  --destructive-foreground: #f8fafc;
+
+  --muted: #0f172a; /* slate-900 */
+  --muted-foreground: #94a3b8; /* slate-400 */
+  
+  --radius: 0.5rem;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  
+  --color-border: var(--border);
+  --color-destructive: var(--destructive);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-ring: var(--ring);
+
+  --radius-sm: calc(var(--radius) - 2px);
+  --radius-md: var(--radius);
+  --radius-lg: calc(var(--radius) + 2px);
+
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
 body {
-  background: var(--background);
+  background-color: var(--background);
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
 }
