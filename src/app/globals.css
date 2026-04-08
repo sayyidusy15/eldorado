@@ -1,50 +1,118 @@
 @import "tailwindcss";
 
 :root {
-  /* Dark mode by default for gaming marketplace */
-  --background: #0b0f19; /* Very dark blue, almost black */
-  --foreground: #e2e8f0; /* slate-200 */
+  /* --- STEAM INSPIRED DESIGN SYSTEM (BASE) --- */
+  
+  /* System greys */
+  --gpSystemLightestGrey: #DCDEDF;
+  --gpSystemLighterGrey: #B8BCBF;
+  --gpSystemLightGrey: #8B929A;
+  --gpSystemGrey: #67707B;
+  --gpSystemDarkGrey: #3D4450;
+  --gpSystemDarkerGrey: #23262E;
+  --gpSystemDarkestGrey: #0E141B;
 
-  /* Theme Colors (Steam/Eldorado inspired) */
-  --primary: #3b82f6; /* bright blue */
+  /* Store blue greys */
+  --gpStoreLightestGrey: #CCD8E3;
+  --gpStoreLighterGrey: #A7BACC;
+  --gpStoreLightGrey: #7C8EA3;
+  --gpStoreGrey: #4e697d;
+  --gpStoreDarkGrey: #2A475E;
+  --gpStoreDarkerGrey: #1B2838;
+  --gpStoreDarkestGrey: #000F18;
+
+  /* Colours */
+  --gpColor-Blue: #1A9FFF;
+  --gpColor-BlueHi: #00BBFF;
+  --gpColor-Green: #5ba32b;
+  --gpColor-GreenHi: #59BF40;
+  --gpColor-Orange: #E35E1C;
+  --gpColor-Red: #D94126;
+  --gpColor-RedHi: #EE563B;
+  --gpColor-DustyBlue: #417a9b;
+  --gpColor-LightBlue: #B3DFFF;
+  --gpColor-Yellow: #FFC82C;
+  --gpColor-ChalkyBlue: #66C0F4;
+
+  /* Backgrounds & Opacities */
+  --gpBackground-LightSofter: #6998bb24;
+  --gpBackground-LightSoft: #3b5a7280;
+  --gpBackground-LightMedium: #678BA670;
+  --gpBackground-LightHard: #93B8D480;
+  --gpBackground-LightHarder: #aacce6a6;
+
+  --gpBackground-DarkSofter: #0e141b33;
+  --gpBackground-DarkSoft: #0e141b66;
+  --gpBackground-DarkMedium: #0e141b99;
+  --gpBackground-DarkHard: #0e141bcc;
+
+  --gpBackground-Neutral-LightSofter: rgba(235, 246, 255, 0.10);
+  --gpBackground-Neutral-LightSoft: rgba(235, 246, 255, 0.20);
+  --gpBackground-Neutral-LightMedium: rgba(235, 246, 255, 0.30);
+  --gpBackground-Neutral-LightHard: rgba(235, 246, 255, 0.40);
+  --gpBackground-Neutral-LightHarder: rgba(235, 246, 255, 0.50);
+
+  /* Gradients */
+  --gpGradient-StoreBackground: linear-gradient(180deg, var(--gpStoreDarkGrey) 0%, var(--gpStoreDarkerGrey) 80%);
+  --gpGradient-LibraryBackground: radial-gradient(farthest-corner at 40px 40px,#3D4450 0%, #23262E 80%);
+
+  /* --- UI MAPPING (Tailwind Compatibility) --- */
+  --background: var(--gpStoreDarkerGrey);
+  --foreground: var(--gpSystemLightestGrey);
+
+  --primary: var(--gpColor-Blue);
   --primary-foreground: #ffffff;
   
-  --secondary: #1e293b; /* slate-800 - for inputs/secondary buttons */
-  --secondary-foreground: #f8fafc; /* slate-50 */
+  --secondary: var(--gpStoreDarkGrey);
+  --secondary-foreground: var(--gpStoreLightestGrey);
 
-  --card: #151e2f; /* slightly lighter dark blue */
-  --card-foreground: #e2e8f0;
+  --card: var(--gpStoreDarkGrey);
+  --card-foreground: var(--gpSystemLightestGrey);
 
-  --border: #1e293b; /* slate-800 */
-  --ring: #3b82f6;
+  --border: var(--gpStoreGrey);
+  --ring: var(--gpColor-BlueHi);
 
-  --destructive: #ef4444; /* red-500 */
-  --destructive-foreground: #f8fafc;
+  --destructive: var(--gpColor-Red);
+  --destructive-foreground: #ffffff;
 
-  --muted: #0f172a; /* slate-900 */
-  --muted-foreground: #94a3b8; /* slate-400 */
+  --muted: var(--gpSystemDarkerGrey);
+  --muted-foreground: var(--gpSystemLightGrey);
   
   --radius: 0.5rem;
 }
 
 @theme inline {
+  /* Standard UI Colors */
   --color-background: var(--background);
   --color-foreground: var(--foreground);
-  
   --color-primary: var(--primary);
-  --color-primary-foreground: var(--primary-foreground);
-  
   --color-secondary: var(--secondary);
-  --color-secondary-foreground: var(--secondary-foreground);
-  
   --color-card: var(--card);
-  --color-card-foreground: var(--card-foreground);
-  
   --color-border: var(--border);
   --color-destructive: var(--destructive);
   --color-muted: var(--muted);
   --color-muted-foreground: var(--muted-foreground);
   --color-ring: var(--ring);
+
+  /* Full GP Palette for Tailwind */
+  --color-gp-blue: var(--gpColor-Blue);
+  --color-gp-blue-hi: var(--gpColor-BlueHi);
+  --color-gp-green: var(--gpColor-Green);
+  --color-gp-orange: var(--gpColor-Orange);
+  --color-gp-red: var(--gpColor-Red);
+  --color-gp-yellow: var(--gpColor-Yellow);
+
+  --color-gp-system-lightest: var(--gpSystemLightestGrey);
+  --color-gp-system-light: var(--gpSystemLightGrey);
+  --color-gp-system-grey: var(--gpSystemGrey);
+  --color-gp-system-darker: var(--gpSystemDarkerGrey);
+  --color-gp-system-darkest: var(--gpSystemDarkestGrey);
+
+  --color-gp-store-lightest: var(--gpStoreLightestGrey);
+  --color-gp-store-grey: var(--gpStoreGrey);
+  --color-gp-store-dark: var(--gpStoreDarkGrey);
+  --color-gp-store-darker: var(--gpStoreDarkerGrey);
+  --color-gp-store-darkest: var(--gpStoreDarkestGrey);
 
   --radius-sm: calc(var(--radius) - 2px);
   --radius-md: var(--radius);
@@ -57,4 +125,6 @@
 body {
   background-color: var(--background);
   color: var(--foreground);
+  background-image: var(--gpGradient-StoreBackground);
+  background-attachment: fixed;
 }

@@ -1,58 +1,90 @@
 /**
- * Halaman dokumentasi Design System (Colors).
+ * Halaman dokumentasi Design System (Steam Inspired Core Colors).
  */
 export default function DesignSystemPage() {
-  const colors = [
-    { name: "Background", variable: "--background", hex: "#0b0f19", description: "Warna dasar latar belakang aplikasi." },
-    { name: "Card", variable: "--card", hex: "#151e2f", description: "Digunakan untuk box, card, dan kontainer terpisah." },
-    { name: "Primary", variable: "--primary", hex: "#3b82f6", description: "Warna aksen utama (Brand Color)." },
-    { name: "Border", variable: "--border", hex: "#1e293b", description: "Warna garis pemisah/border komponen." },
-    { name: "Muted Foreground", variable: "--muted-foreground", hex: "#94a3b8", description: "Warna teks untuk deskripsi atau informasi kurang penting." },
+  const sections = [
+    {
+      title: "Store Blue Greys",
+      description: "Warna pallet utama untuk tema toko/store.",
+      colors: [
+        { name: "Store Darkest", var: "--gpStoreDarkestGrey", hex: "#000F18" },
+        { name: "Store Darker", var: "--gpStoreDarkerGrey", hex: "#1B2838" },
+        { name: "Store Dark", var: "--gpStoreDarkGrey", hex: "#2A475E" },
+        { name: "Store Grey", var: "--gpStoreGrey", hex: "#4e697d" },
+        { name: "Store Lightest", var: "--gpStoreLightestGrey", hex: "#CCD8E3" },
+      ]
+    },
+    {
+      title: "System Greys",
+      description: "Warna pallet abu-abu netral untuk elemen UI sistem.",
+      colors: [
+        { name: "System Darkest", var: "--gpSystemDarkestGrey", hex: "#0E141B" },
+        { name: "System Darker", var: "--gpSystemDarkerGrey", hex: "#23262E" },
+        { name: "System Dark", var: "--gpSystemDarkGrey", hex: "#3D4450" },
+        { name: "System Lightest", var: "--gpSystemLightestGrey", hex: "#DCDEDF" },
+      ]
+    },
+    {
+      title: "Brand Colors",
+      description: "Warna aksen untuk status, tombol, dan highlight.",
+      colors: [
+        { name: "GP Blue", var: "--gpColor-Blue", hex: "#1A9FFF" },
+        { name: "GP Blue Hi", var: "--gpColor-BlueHi", hex: "#00BBFF" },
+        { name: "GP Green", var: "--gpColor-Green", hex: "#5ba32b" },
+        { name: "GP Orange", var: "--gpColor-Orange", hex: "#E35E1C" },
+        { name: "GP Red", var: "--gpColor-Red", hex: "#D94126" },
+      ]
+    }
   ];
 
   return (
-    <div className="space-y-12">
+    <div className="space-y-16">
       <section>
-        <h1 className="text-4xl font-extrabold tracking-tight mb-4">Colors & Theme</h1>
-        <p className="text-muted-foreground text-lg">
-          Panduan sistem warna yang digunakan di dalam project LyvenStore. Sistem ini menggunakan 
-          CSS Variables untuk fleksibilitas tema.
+        <h1 className="text-4xl font-extrabold tracking-tight mb-4">Core Design System</h1>
+        <p className="text-muted-foreground text-lg max-w-3xl border-l-4 border-primary pl-6 py-2">
+          Sistem warna utama LyvenStore yang diadaptasi dari standar estetika Gaming Platform premium. 
+          Semua elemen UI harus merujuk pada variabel-variabel di bawah ini.
         </p>
       </section>
 
-      <section className="space-y-6">
-        <h2 className="text-2xl font-bold">Color Palette</h2>
-        <div className="grid gap-4">
-          {colors.map((color) => (
-            <div key={color.variable} className="flex flex-col md:flex-row md:items-center gap-4 p-4 rounded-xl border border-border/50 bg-secondary/5">
-              <div 
-                className="w-16 h-16 rounded-lg shadow-inner border border-white/10" 
-                style={{ backgroundColor: `var(${color.variable})` }}
-              />
-              <div className="flex-1">
-                <div className="flex items-center gap-2 mb-1">
-                  <h3 className="font-bold">{color.name}</h3>
-                  <code className="text-[10px] bg-secondary px-1.5 py-0.5 rounded text-muted-foreground uppercase">{color.hex}</code>
+      {sections.map((section, idx) => (
+        <section key={idx} className="space-y-6">
+          <div className="space-y-1">
+            <h2 className="text-2xl font-bold tracking-tight">{section.title}</h2>
+            <p className="text-muted-foreground text-sm">{section.description}</p>
+          </div>
+          
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {section.colors.map((color) => (
+              <div key={color.var} className="group relative p-4 rounded-xl border border-border/30 bg-secondary/5 hover:bg-secondary/10 transition-colors">
+                <div 
+                  className="w-full h-24 rounded-lg mb-4 shadow-lg border border-white/5" 
+                  style={{ backgroundColor: `var(${color.var})` }}
+                />
+                <div className="space-y-1">
+                  <h3 className="font-bold text-sm tracking-tight">{color.name}</h3>
+                  <div className="flex items-center justify-between text-[10px] font-mono">
+                    <span className="text-muted-foreground uppercase">{color.hex}</span>
+                    <span className="text-primary">{color.var}</span>
+                  </div>
                 </div>
-                <p className="text-sm text-muted-foreground mb-1">{color.description}</p>
-                <code className="text-xs text-primary">{color.variable}</code>
               </div>
-            </div>
-          ))}
-        </div>
-      </section>
+            ))}
+          </div>
+        </section>
+      ))}
 
       <section className="space-y-4">
-        <h2 className="text-2xl font-bold">CSS Usage</h2>
-        <div className="p-4 rounded-lg bg-secondary/30 font-mono text-sm border border-border/50 text-blue-300">
-          <pre>
-{`/* Contoh penggunaan di CSS */
-.my-card {
-  background-color: var(--card);
-  border: 1px solid var(--border);
-  color: var(--foreground);
-}`}
-          </pre>
+        <h2 className="text-2xl font-bold">Gradients</h2>
+        <div className="grid gap-6 md:grid-cols-2">
+          <div className="space-y-3">
+            <p className="text-xs text-muted-foreground font-mono">--gpGradient-StoreBackground</p>
+            <div className="h-32 rounded-xl border border-border/50" style={{ backgroundImage: "var(--gpGradient-StoreBackground)" }} />
+          </div>
+          <div className="space-y-3">
+            <p className="text-xs text-muted-foreground font-mono">--gpGradient-LibraryBackground</p>
+            <div className="h-32 rounded-xl border border-border/50" style={{ backgroundImage: "var(--gpGradient-LibraryBackground)" }} />
+          </div>
         </div>
       </section>
     </div>
