@@ -42,6 +42,12 @@ export function DocSidebar() {
         { label: "UI Components", href: "/documentation/ui-components", icon: Code2 },
         { label: "Layouts", href: "/documentation/layouts", icon: Settings2 },
       ]
+    },
+    {
+      title: "Sections",
+      items: [
+        { label: "Landing Page", href: "/documentation/sections/landing-page", icon: Layers },
+      ]
     }
   ];
 
