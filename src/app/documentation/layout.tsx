@@ -15,7 +15,7 @@ export default function DocumentationLayout({
       <DocSidebar />
 
       {/* Main Content Area */}
-      <main className="flex-1 ml-64 p-8 lg:p-12 max-w-5xl mx-auto">
+      <main className="flex-1 ml-64 p-8 lg:p-12">
         <div className="animate-in fade-in slide-in-from-bottom-4 duration-700">
           {children}
         </div>
