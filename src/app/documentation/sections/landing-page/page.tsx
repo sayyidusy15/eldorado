@@ -211,50 +211,115 @@ import { HeroSlider } from "@/components/landing/HeroSlider";
           <div className="bg-white/5 p-4 px-6 border-b border-white/5 flex items-center justify-between">
             <h2 className="font-bold flex items-center gap-3 text-white">
               <FontAwesomeIcon icon={faMagicWandSparkles} className="text-ui-primary h-4" />
-              Featured Voucher (Roblox Solutions)
+              Featured Voucher (Gift Card Style)
             </h2>
-            <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400">Thematic Section</span>
+            <span className="text-[10px] uppercase font-bold tracking-widest text-[#beee11]">Thematic Section</span>
           </div>
 
           <div className="p-8 space-y-12">
-            {/* Design Specs */}
+            {/* Immersive Specs */}
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
               <div className="space-y-4">
                 <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Immersive Specs</h3>
                 <ul className="space-y-3 text-sm">
                   <li className="flex items-center gap-3 text-ui-text-dim">
-                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
-                    <span><strong>Container:</strong> Full-width background with <code>backdrop-blur-3xl</code> container.</span>
+                    <div className="w-1.5 h-1.5 bg-ui-accent-green rounded-full shadow-[0_0_5px_#beee11]" />
+                    <span><strong>Thumbnail Ratio:</strong> <code>4:5</code> Portrait (Gift Card Aesthetic)</span>
                   </li>
                   <li className="flex items-center gap-3 text-ui-text-dim">
-                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
-                    <span><strong>Voucher Style:</strong> "Gift Card" aesthetic with punch-hole details.</span>
+                    <div className="w-1.5 h-1.5 bg-ui-accent-green rounded-full shadow-[0_0_5px_#beee11]" />
+                    <span><strong>Physical Detail:</strong> Solid Gray <code>#4B5563</code> Euro-Hole hanging slot.</span>
                   </li>
                   <li className="flex items-center gap-3 text-ui-text-dim">
-                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
-                    <span><strong>Price Color:</strong> Fixed orange <code>#F47521</code> for maximum urgency.</span>
+                    <div className="w-1.5 h-1.5 bg-ui-accent-green rounded-full shadow-[0_0_5px_#beee11]" />
+                    <span><strong>Price Color:</strong> Green <code>#beee11</code> synced with Explore Accounts.</span>
                   </li>
                 </ul>
               </div>
               
-              <div className="p-6 rounded-sm bg-orange-400/5 border border-orange-400/20">
-                 <h4 className="text-xs font-bold text-orange-400 uppercase mb-3 text-left">UX Direction</h4>
+              <div className="p-6 rounded-sm bg-ui-accent-green/5 border border-ui-accent-green/20">
+                 <h4 className="text-xs font-bold text-ui-accent-green uppercase mb-3 text-left">UX Direction</h4>
                  <p className="text-xs text-ui-text-dim leading-relaxed text-left">
-                   Seksi ini dirancang untuk "highlight" kategori spesifik (e.g. Roblox). Menggunakan glassmorphism 
-                   yang kuat untuk memisahkan fokus user dari background yang ramai, namun tetap mempertahankan 
-                   atmosfer tematik game tersebut.
+                   Seksi ini dirancang untuk menonjolkan produk kategori "Voucher" dengan nuansa kartu fisik. 
+                   Menggunakan slider 1-per-1 kartu dengan perhitungan <code>20% + 4px</code> agar navigasi 
+                   terasa taktis dan tidak ada kartu yang terpotong di tepi container.
                  </p>
+              </div>
+            </div>
+
+            {/* Database Schema */}
+            <div className="space-y-6">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Database Schema (PostgreSQL)</h3>
+              <div className="overflow-x-auto border border-white/5 rounded-sm text-white">
+                <table className="w-full text-left text-xs">
+                  <thead className="bg-white/5 text-ui-text-dim uppercase font-bold">
+                    <tr>
+                      <th className="p-3 border-b border-white/5">Field Name</th>
+                      <th className="p-3 border-b border-white/5">Data Type</th>
+                      <th className="p-3 border-b border-white/5">Description</th>
+                    </tr>
+                  </thead>
+                  <tbody className="divide-y divide-white/5">
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">id</td>
+                      <td className="p-3 text-orange-300">UUID</td>
+                      <td className="p-3 text-ui-text-dim">Primary Key</td>
+                    </tr>
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">title</td>
+                      <td className="p-3 text-orange-300">VARCHAR(255)</td>
+                      <td className="p-3 text-ui-text-dim">Nama voucher (ex: Roblox 100 Robux)</td>
+                    </tr>
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">subtitle</td>
+                      <td className="p-3 text-orange-300">VARCHAR(100)</td>
+                      <td className="p-3 text-ui-text-dim">Deskripsi singkat (ex: Robux Gift Card)</td>
+                    </tr>
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">price</td>
+                      <td className="p-3 text-orange-300">DECIMAL(15,2)</td>
+                      <td className="p-3 text-ui-text-dim">Harga voucher dalam IDR</td>
+                    </tr>
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">sales</td>
+                      <td className="p-3 text-orange-300">INTEGER</td>
+                      <td className="p-3 text-ui-text-dim">Total voucher terjual</td>
+                    </tr>
+                    <tr className="hover:bg-white-[2%]">
+                      <td className="p-3 font-mono text-ui-primary">image_url</td>
+                      <td className="p-3 text-orange-300">TEXT</td>
+                      <td className="p-3 text-ui-text-dim">Path gambar dengan aspek rasio 4:5</td>
+                    </tr>
+                  </tbody>
+                </table>
+              </div>
+            </div>
+
+            {/* SQL Code Block */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">SQL Implementation</h3>
+              <div className="p-5 rounded-sm bg-black/60 border border-white/5 font-mono text-xs text-ui-primary overflow-x-auto">
+                <pre>{`CREATE TABLE vouchers (
+    id UUID PRIMARY KEY DEFAULT gen_random_uuid(),
+    title VARCHAR(255) NOT NULL,
+    subtitle VARCHAR(100),
+    price DECIMAL(15, 2) DEFAULT 0.00,
+    sales INTEGER DEFAULT 0,
+    rating NUMERIC(2, 1) DEFAULT 0.0,
+    image_url TEXT,
+    created_at TIMESTAMP WITH TIME ZONE DEFAULT CURRENT_TIMESTAMP
+);`}</pre>
               </div>
             </div>
 
             {/* Usage Code */}
             <div className="space-y-4">
-              <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Usage</h3>
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Code Usage</h3>
               <div className="p-5 rounded-sm bg-black/40 border border-white/5 font-mono text-xs text-blue-300 overflow-x-auto">
                 <pre>{`// Terletak di src/components/landing/FeaturedVoucher.tsx
 import { FeaturedVoucher } from "@/components/landing/FeaturedVoucher";
 
-// Gunakan di luar container max-w jika ingin full-width background
+// Implementasi di halaman utama
 <FeaturedVoucher />`}</pre>
               </div>
             </div>
