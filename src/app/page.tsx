@@ -1,38 +1,26 @@
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-import { Switch } from "@/components/ui/switch";
-import { Checkbox } from "@/components/ui/checkbox";
-import { ReviewProgress } from "@/components/ui/progress-review";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { 
-  faPlay, 
-  faDownload, 
-  faShoppingCart, 
-  faHeart, 
-  faChartLine 
-} from "@fortawesome/free-solid-svg-icons";
+import { HeroSlider } from "@/components/landing/HeroSlider";
 
 export default function Home() {
   return (
-    <div 
-      className="relative flex-1 flex flex-col items-center justify-center p-8 text-center overflow-hidden"
-      style={{ 
-        background: "linear-gradient(-14deg, var(--uiBg-Tertiary) 0%, var(--uiBg-Main) 100%)",
-        backgroundAttachment: "fixed"
-      }}
-    >
-      {/* Vector Background Layer */}
-      <div className="absolute inset-0 z-0 opacity-20 pointer-events-none">
+    <main className="relative flex-1 bg-ui-bg-main overflow-x-hidden pb-20">
+      {/* Background Vector (Subtle) */}
+      <div className="absolute top-0 left-0 right-0 h-[800px] z-0 opacity-10 pointer-events-none">
         <Image 
           src="/assets/images/vector-bg.png" 
-          alt="background vector" 
+          alt="background" 
           fill 
+          className="object-cover object-top"
           priority
-          className="object-cover"
         />
       </div>
 
-      
-    </div>
+      {/* LANDING PAGE CONTENT CONTAINER (1100px) */}
+      <div className="relative z-10 max-w-[1100px] mx-auto pt-8 px-4 lg:px-0">
+        <HeroSlider />
+        
+        {/* Future sections will be added here as separate components in src/components/landing/ */}
+      </div>
+    </main>
   );
 }
