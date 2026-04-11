@@ -8,7 +8,7 @@ export function Footer() {
           {/* Brand Col */}
           <div className="space-y-4">
             <Link href="/" className="inline-block">
-              <span className="text-xl font-bold tracking-tight text-primary">Lyven<span className="text-foreground">Store</span></span>
+              <span className="text-xl font-bold tracking-tight text-primary">Eldorado<span className="text-foreground">Store</span></span>
             </Link>
             <p className="text-sm text-muted-foreground max-w-xs">
               Platform marketplace digital khusus game yang aman, cepat, dan terpercaya.
@@ -52,7 +52,7 @@ export function Footer() {
 
         <div className="mt-12 flex flex-col items-center justify-between border-t border-border pt-8 md:flex-row gap-4">
           <p className="text-sm text-muted-foreground">
-            &copy; {new Date().getFullYear()} LyvenStore. All rights reserved.
+            &copy; {new Date().getFullYear()} Eldorado. All rights reserved.
           </p>
           <div className="flex space-x-4 text-sm text-muted-foreground">
             <span>Secure Checkout with DOKU & PayPal</span>

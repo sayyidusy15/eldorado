@@ -95,7 +95,7 @@
   --muted: var(--uiBg-Highlight);
   --muted-foreground: var(--uiText-Dim);
   
-  --radius: 0.5rem;
+  --radius: 2px;
 }
 
 @theme inline {

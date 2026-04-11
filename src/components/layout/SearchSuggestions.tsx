@@ -41,25 +41,21 @@ export function SearchSuggestions({ isOpen, onClose }: { isOpen: boolean; onClos
         animate={{ opacity: 1, scale: 1, y: 0 }}
         exit={{ opacity: 0, scale: 0.98, y: -5 }}
         transition={{ duration: 0.15, ease: "easeOut" }}
-        className="absolute top-0 left-0 right-0 h-[500px] bg-[#1E2329] shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-50 rounded-xl border border-white/5 overflow-hidden"
+        className="absolute top-0 left-0 right-0 h-[500px] bg-[#1E2329] shadow-[0_20px_50px_rgba(0,0,0,0.8)] z-50 rounded-sm border border-white/5 overflow-hidden"
       >
         {/* Active Search Header Highlight (Optional based on image) */}
         <div className="h-1 bg-ui-accent-yellow/50" />
 
-        <div className="p-8 space-y-8 h-full overflow-y-auto custom-scrollbar">
-           <h3 className="text-[10px] font-black uppercase tracking-[0.2em] text-ui-text-dim/60">
-             Popular Categories
-           </h3>
-
+        <div className="p-8 space-y-8 h-full overflow-y-auto custom-scrollbar mt-6">
            <div className="grid grid-cols-1 gap-2">
              {popularCategories.map((item, idx) => (
                <Link 
                  key={idx} 
                  href="#"
-                 className="flex items-center gap-4 p-3 rounded-xl hover:bg-white/5 transition-all group"
+                 className="flex items-center gap-4 p-3 rounded-sm hover:bg-white/5 transition-all group"
                >
                  <div className={cn(
-                   "w-10 h-10 rounded-lg flex items-center justify-center text-[10px] font-black shadow-inner flex-shrink-0",
+                   "w-10 h-10 rounded-sm flex items-center justify-center text-[10px] font-black shadow-inner flex-shrink-0",
                    item.color
                  )}>
                     {item.icon}

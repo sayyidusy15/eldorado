@@ -48,7 +48,7 @@ const motivaSans = localFont({
 });
 
 export const metadata: Metadata = {
-  title: "LyvenStore - Digital Game Marketplace",
+  title: "Eldorado - Digital Game Marketplace",
   description: "Marketplace terpercaya untuk beli dan jual akun game, item, dan top up. Transaksi aman dengan sistem escrow dan garansi.",
 };
 

@@ -17,7 +17,7 @@ export default function DocumentationPage() {
           Project Documentation
         </h1>
         <p className="text-xl text-muted-foreground max-w-3xl leading-relaxed">
-          Selamat datang di portal dokumentasi LyvenStore. Halaman ini digunakan untuk mencatat 
+          Selamat datang di portal dokumentasi Eldorado. Halaman ini digunakan untuk mencatat 
           setiap keputusan teknis, panduan desain, dan referensi komponen di dalam project ini.
         </p>
       </section>

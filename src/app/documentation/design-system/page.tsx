@@ -45,7 +45,7 @@ export default function DesignSystemPage() {
       <section>
         <h1 className="text-4xl font-extrabold tracking-tight mb-4">Core Design System</h1>
         <p className="text-muted-foreground text-lg max-w-3xl border-l-4 border-primary pl-6 py-2">
-          Sistem warna utama LyvenStore yang diadaptasi dari standar estetika Gaming Platform premium. 
+          Sistem warna utama Eldorado yang diadaptasi dari standar estetika Gaming Platform premium. 
           Semua elemen UI harus merujuk pada variabel-variabel di bawah ini.
         </p>
       </section>

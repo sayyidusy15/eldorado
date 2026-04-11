@@ -67,7 +67,7 @@ export default function SkillTreePage() {
         </h1>
         <p className="text-muted-foreground text-lg">
           Representasi visual dari kemampuan teknis dan pengalaman yang di-migrate dan 
-          diaplikasikan di dalam project LyvenStore.
+          diaplikasikan di dalam project Eldorado.
         </p>
       </section>
 
@@ -129,7 +129,7 @@ npx skills add artivilla/agents-config@technical-writing-styleguide -y`}
         <FontAwesomeIcon icon={faRocket} className="text-3xl text-primary animate-bounce" />
         <h3 className="font-bold text-lg leading-none">Global Skillset Synced</h3>
         <p className="text-sm text-muted-foreground max-w-sm italic">
-          Skillset dari project referensi (Qwibly) telah berhasil disinkronisasi ke dalam fondasi LyvenStore.
+          Skillset dari project referensi (Qwibly) telah berhasil disinkronisasi ke dalam fondasi Eldorado.
         </p>
       </section>
     </div>

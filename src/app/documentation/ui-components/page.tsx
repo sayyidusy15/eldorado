@@ -27,6 +27,38 @@ export default function UIComponentsPage() {
         </p>
       </section>
 
+      {/* Navigation & Layouts */}
+      <section className="space-y-8">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-bold tracking-tight">Navigation System</h2>
+          <p className="text-muted-foreground text-sm">Arsitektur navigasi dua tingkat (Top & Secondary) dengan sistem interaktif.</p>
+        </div>
+
+        <div className="grid gap-6">
+          <div className="p-8 rounded-sm bg-secondary/5 border border-border/50 flex flex-col gap-6">
+             <div className="flex items-center justify-between">
+                <h4 className="text-sm font-bold">Top Navbar</h4>
+                <span className="text-[10px] bg-ui-accent-green/20 text-ui-accent-green px-2 py-0.5 rounded font-bold uppercase tracking-widest">Main Entry</span>
+             </div>
+             <p className="text-xs text-muted-foreground leading-relaxed">
+               Mengelola identitas (Logo), pencarian global, dan autentikasi. Menggunakan <code>bg-ui-bg-main</code>.
+               Fitur utama: **Search Suggestions** (Auto-popup saat fokus pada input pencarian).
+             </p>
+          </div>
+
+          <div className="p-8 rounded-sm bg-secondary/5 border border-border/50 flex flex-col gap-6">
+             <div className="flex items-center justify-between">
+                <h4 className="text-sm font-bold">Secondary Navbar</h4>
+                <span className="text-[10px] bg-ui-primary/20 text-ui-primary px-2 py-0.5 rounded font-bold uppercase tracking-widest">Interactive Nav</span>
+             </div>
+             <p className="text-xs text-muted-foreground leading-relaxed">
+               Mengelola navigasi kategori game. Menggunakan <code>bg-ui-bg-tertiary</code> dengan font putih transparan.
+               Fitur utama: **Navbar Dropdown** (Panel glassmorphism 2 kolom untuk navigasi produk premium).
+             </p>
+          </div>
+        </div>
+      </section>
+
       {/* Buttons Section */}
       <section className="space-y-8">
         <div className="space-y-1">
@@ -38,7 +70,7 @@ export default function UIComponentsPage() {
           {/* Primary & Action Buttons */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/50">Primary & Action</h3>
-            <div className="flex flex-wrap gap-4 p-8 rounded-2xl bg-secondary/5 border border-border/50">
+            <div className="flex flex-wrap gap-4 p-8 rounded-sm bg-secondary/5 border border-border/50">
               <div className="space-y-3">
                 <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-primary"</span>
                 <Button variant="gp-primary" className="w-48">
@@ -57,7 +89,7 @@ export default function UIComponentsPage() {
           {/* Functional Buttons */}
           <div className="space-y-4">
             <h3 className="text-sm font-semibold uppercase tracking-widest text-primary/50">Functional Actions</h3>
-            <div className="flex flex-wrap gap-4 p-8 rounded-2xl bg-secondary/5 border border-border/50">
+            <div className="flex flex-wrap gap-4 p-8 rounded-sm bg-secondary/5 border border-border/50">
               <div className="space-y-3">
                 <span className="text-[10px] uppercase text-muted-foreground block">variant="gp-purchase"</span>
                 <Button variant="gp-purchase" size="lg" className="px-10">
@@ -85,7 +117,7 @@ export default function UIComponentsPage() {
         <div className="grid gap-12 md:grid-cols-2">
           {/* Toggle & Checkbox */}
           <div className="space-y-6">
-            <div className="p-8 rounded-2xl bg-secondary/5 border border-border/50 space-y-8">
+            <div className="p-8 rounded-sm bg-secondary/5 border border-border/50 space-y-8">
               <div className="flex items-center justify-between gap-8">
                 <div className="space-y-1">
                   <h4 className="text-sm font-bold">Switch / Toggle</h4>
@@ -112,7 +144,7 @@ export default function UIComponentsPage() {
 
           {/* Review Progress */}
           <div className="space-y-6">
-            <div className="p-8 rounded-2xl bg-secondary/5 border border-border/50 space-y-8">
+            <div className="p-8 rounded-sm bg-secondary/5 border border-border/50 space-y-8">
               <div className="space-y-4">
                 <h4 className="text-sm font-bold">Review Sentiment Bar</h4>
                 <div className="space-y-6">
@@ -131,7 +163,7 @@ export default function UIComponentsPage() {
           <p className="text-muted-foreground text-sm">Elemen input untuk pencarian dan pengisian data formulir.</p>
         </div>
 
-        <div className="grid gap-8 p-8 rounded-2xl bg-secondary/5 border border-border/50">
+        <div className="grid gap-8 p-8 rounded-sm bg-secondary/5 border border-border/50">
           <div className="max-w-md space-y-3">
              <span className="text-[10px] uppercase text-muted-foreground block">Default Input</span>
              <Input placeholder="Tuliskan sesuatu..." />
@@ -146,7 +178,7 @@ export default function UIComponentsPage() {
       {/* Code Usage */}
       <section className="space-y-4">
         <h2 className="text-2xl font-bold">Usage (Font Awesome 6)</h2>
-        <div className="p-6 rounded-xl bg-ui-bg-tertiary border border-border/50 font-mono text-sm leading-relaxed">
+        <div className="p-6 rounded-sm bg-ui-bg-tertiary border border-border/50 font-mono text-sm leading-relaxed">
           <pre className="text-blue-300">
 {`import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faShoppingCart } from "@fortawesome/free-solid-svg-icons";

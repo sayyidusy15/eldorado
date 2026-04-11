@@ -55,7 +55,7 @@ export function NavbarDropdown({ activeMenu, onClose }: { activeMenu: string | n
         animate={{ opacity: 1, y: 0 }}
         exit={{ opacity: 0, y: -10 }}
         transition={{ duration: 0.2, ease: "easeOut" }}
-        className="absolute left-8 mt-2 w-[950px] bg-ui-bg-tertiary/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 rounded-2xl overflow-hidden"
+        className="absolute left-8 mt-2 w-[950px] bg-ui-bg-tertiary/90 backdrop-blur-xl border border-white/10 shadow-[0_20px_50px_rgba(0,0,0,0.5)] z-40 rounded-sm overflow-hidden"
       >
         <div className="flex divide-x divide-white/5">
           {/* Left Column: Popular Games */}
@@ -69,10 +69,10 @@ export function NavbarDropdown({ activeMenu, onClose }: { activeMenu: string | n
                 <Link 
                   key={idx} 
                   href="#"
-                  className="flex items-center gap-4 p-2.5 rounded-xl hover:bg-white/10 transition-all group"
+                  className="flex items-center gap-4 p-2.5 rounded-sm hover:bg-white/10 transition-all group"
                 >
                   <div className={cn(
-                    "w-9 h-9 rounded-lg flex items-center justify-center text-[10px] font-black shadow-inner flex-shrink-0 transition-transform group-hover:scale-110",
+                    "w-9 h-9 rounded-sm flex items-center justify-center text-[10px] font-black shadow-inner flex-shrink-0 transition-transform group-hover:scale-110",
                     game.color
                   )}>
                      {game.icon}
@@ -98,7 +98,7 @@ export function NavbarDropdown({ activeMenu, onClose }: { activeMenu: string | n
               />
               <Input 
                 placeholder="Search for game" 
-                className="pl-9 h-10 bg-black/30 border-white/5 focus:border-ui-primary/50 text-xs rounded-xl"
+                className="pl-9 h-10 bg-black/30 border-white/5 focus:border-ui-primary/50 text-xs rounded-sm"
               />
             </div>
 
@@ -107,10 +107,10 @@ export function NavbarDropdown({ activeMenu, onClose }: { activeMenu: string | n
                   <Link 
                     key={idx} 
                     href="#"
-                    className="flex items-center gap-3 p-2.5 rounded-xl hover:bg-white/10 transition-all group"
+                    className="flex items-center gap-3 p-2.5 rounded-sm hover:bg-white/10 transition-all group"
                   >
                     <div className={cn(
-                      "w-8 h-8 rounded-lg flex items-center justify-center text-[9px] font-black flex-shrink-0",
+                      "w-8 h-8 rounded-sm flex items-center justify-center text-[9px] font-black flex-shrink-0",
                       game.color
                     )}>
                        {game.icon}

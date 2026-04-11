@@ -30,7 +30,7 @@ export function TopNavbar() {
         {/* Logo */}
         <Link href="/" className="flex-shrink-0">
            <span className="text-2xl font-black italic tracking-tighter text-ui-text-main">
-            LYVEN<span className="text-ui-primary text-xl not-italic ml-0.5 uppercase">store</span>
+            Eldorado<span className="text-ui-primary text-xl not-italic ml-0.5 uppercase">store</span>
            </span>
         </Link>
 
@@ -47,24 +47,20 @@ export function TopNavbar() {
           </AnimatePresence>
 
           {/* Actual Input Field */}
-          <div className="relative group z-[60]">
-            <FontAwesomeIcon 
-              icon={faSearch} 
-              className={cn(
-                "absolute left-3 top-1/2 -translate-y-1/2 transition-colors h-3.5 w-3.5 pointer-events-none",
-                isSearchFocused ? "text-ui-accent-yellow" : "text-ui-text-dim/40 group-focus-within:text-ui-primary"
-              )} 
-            />
+          <div className="relative flex items-center group z-[60]">
             <Input 
               onFocus={() => setIsSearchFocused(true)}
-              placeholder="Search for games, items or gift cards..." 
+              placeholder="Search the store" 
               className={cn(
-                "pl-10 h-10 border-transparent transition-all placeholder:text-ui-text-dim/30 placeholder:italic",
+                "h-10 border-transparent transition-all placeholder:text-ui-text-dim/50 placeholder:italic rounded-r-none",
                 isSearchFocused 
-                  ? "bg-[#1E2329] ring-2 ring-ui-accent-yellow/50 border-ui-accent-yellow shadow-xl" 
+                  ? "bg-[#1E2329] border-ui-accent-yellow shadow-xl ring-0" 
                   : "bg-ui-bg-tertiary focus:bg-ui-bg-tertiary/80"
               )}
             />
+            <button className="h-10 w-12 bg-[#1ab0ff] hover:bg-[#1ab0ff]/90 text-white flex items-center justify-center rounded-r-sm transition-colors shadow-lg shadow-[#1ab0ff]/20">
+              <FontAwesomeIcon icon={faSearch} className="h-4 w-4" />
+            </button>
           </div>
         </div>
 

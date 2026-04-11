@@ -52,7 +52,7 @@ export function DocSidebar() {
           <div className="w-8 h-8 rounded-lg bg-primary flex items-center justify-center font-bold text-white shadow-lg shadow-primary/20">
             L
           </div>
-          <span className="font-bold text-xl tracking-tight">Lyven<span className="text-primary">Docs</span></span>
+          <span className="font-bold text-xl tracking-tight">Eldorado<span className="text-primary">Docs</span></span>
         </Link>
 
         <nav className="space-y-8">
