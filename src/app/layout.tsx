@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 import "@fortawesome/fontawesome-svg-core/styles.css";
 import { config } from "@fortawesome/fontawesome-svg-core";
+import { Navbar } from "@/components/layout/Navbar";
 config.autoAddCss = false;
 
 const motivaSans = localFont({
@@ -59,6 +60,7 @@ export default function RootLayout({
   return (
     <html lang="id">
       <body className={`${motivaSans.variable} font-sans antialiased min-h-screen flex flex-col`}>
+        <Navbar />
         <main className="flex-1 flex flex-col">
           {children}
         </main>

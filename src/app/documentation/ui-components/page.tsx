@@ -1,4 +1,5 @@
 import { Button } from "@/components/ui/button";
+import { Input } from "@/components/ui/input";
 import { Switch } from "@/components/ui/switch";
 import { Checkbox } from "@/components/ui/checkbox";
 import { ReviewProgress } from "@/components/ui/progress-review";
@@ -119,6 +120,25 @@ export default function UIComponentsPage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Inputs Section */}
+      <section className="space-y-8">
+        <div className="space-y-1">
+          <h2 className="text-2xl font-bold tracking-tight">Inputs</h2>
+          <p className="text-muted-foreground text-sm">Elemen input untuk pencarian dan pengisian data formulir.</p>
+        </div>
+
+        <div className="grid gap-8 p-8 rounded-2xl bg-secondary/5 border border-border/50">
+          <div className="max-w-md space-y-3">
+             <span className="text-[10px] uppercase text-muted-foreground block">Default Input</span>
+             <Input placeholder="Tuliskan sesuatu..." />
+          </div>
+          <div className="max-w-md space-y-3">
+             <span className="text-[10px] uppercase text-muted-foreground block">Input with Primary Ring (Focus)</span>
+             <Input placeholder="Input yang sedang aktif..." className="ring-1 ring-ui-primary border-ui-primary" />
           </div>
         </div>
       </section>

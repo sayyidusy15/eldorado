@@ -18,7 +18,7 @@ const buttonVariants = cva(
         "gp-primary": "bg-ui-primary text-ui-bg-main hover:brightness-110 active:scale-[0.98] font-bold shadow-lg shadow-ui-primary/10",
         "gp-action": "bg-ui-secondary text-ui-text-main hover:bg-ui-primary hover:text-ui-bg-main active:scale-[0.98] font-bold",
         "gp-ghost": "bg-ui-bg-highlight text-ui-text-main hover:bg-ui-bg-hover active:bg-ui-bg-tertiary transition-all",
-        "gp-purchase": "bg-ui-accent-green text-ui-bg-main hover:brightness-110 active:scale-[0.98] font-bold shadow-lg shadow-ui-accent-green/10",
+        "gp-purchase": "bg-ui-accent-green text-white hover:brightness-110 active:scale-[0.98] font-bold shadow-lg shadow-ui-accent-green/10",
         "gp-tertiary": "bg-ui-bg-tertiary text-ui-text-main hover:bg-ui-bg-hover active:scale-[0.98]",
       },
       size: {
