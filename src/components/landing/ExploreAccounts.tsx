@@ -64,7 +64,7 @@ export function ExploreAccounts() {
     <section className="relative max-w-[1100px] mx-auto group/explore">
        <div className="bg-ui-bg-main/20 p-8 rounded-sm border border-white/5 shadow-inner">
           <div className="flex items-center justify-between px-1 mb-6">
-            <h2 className="text-xl font-bold text-white tracking-tight flex items-center gap-3">
+            <h2 className="text-3xl font-bold text-white tracking-tight flex items-center gap-3">
                Explore Akun Game
             </h2>
             <button className="text-[10px] font-bold uppercase tracking-widest text-ui-text-dim hover:text-white transition-colors flex items-center gap-2 group">

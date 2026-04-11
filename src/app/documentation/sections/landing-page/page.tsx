@@ -205,6 +205,61 @@ import { HeroSlider } from "@/components/landing/HeroSlider";
             </div>
           </div>
         </div>
+
+        {/* Featured Voucher Section */}
+        <div id="featured-voucher" className="bg-ui-bg-secondary/20 rounded-sm border border-white/5 overflow-hidden scroll-mt-24">
+          <div className="bg-white/5 p-4 px-6 border-b border-white/5 flex items-center justify-between">
+            <h2 className="font-bold flex items-center gap-3 text-white">
+              <FontAwesomeIcon icon={faMagicWandSparkles} className="text-ui-primary h-4" />
+              Featured Voucher (Roblox Solutions)
+            </h2>
+            <span className="text-[10px] uppercase font-bold tracking-widest text-orange-400">Thematic Section</span>
+          </div>
+
+          <div className="p-8 space-y-12">
+            {/* Design Specs */}
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+              <div className="space-y-4">
+                <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Immersive Specs</h3>
+                <ul className="space-y-3 text-sm">
+                  <li className="flex items-center gap-3 text-ui-text-dim">
+                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+                    <span><strong>Container:</strong> Full-width background with <code>backdrop-blur-3xl</code> container.</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-ui-text-dim">
+                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+                    <span><strong>Voucher Style:</strong> "Gift Card" aesthetic with punch-hole details.</span>
+                  </li>
+                  <li className="flex items-center gap-3 text-ui-text-dim">
+                    <div className="w-1.5 h-1.5 bg-orange-400 rounded-full" />
+                    <span><strong>Price Color:</strong> Fixed orange <code>#F47521</code> for maximum urgency.</span>
+                  </li>
+                </ul>
+              </div>
+              
+              <div className="p-6 rounded-sm bg-orange-400/5 border border-orange-400/20">
+                 <h4 className="text-xs font-bold text-orange-400 uppercase mb-3 text-left">UX Direction</h4>
+                 <p className="text-xs text-ui-text-dim leading-relaxed text-left">
+                   Seksi ini dirancang untuk "highlight" kategori spesifik (e.g. Roblox). Menggunakan glassmorphism 
+                   yang kuat untuk memisahkan fokus user dari background yang ramai, namun tetap mempertahankan 
+                   atmosfer tematik game tersebut.
+                 </p>
+              </div>
+            </div>
+
+            {/* Usage Code */}
+            <div className="space-y-4">
+              <h3 className="text-sm font-bold uppercase tracking-widest text-ui-text-dim/50">Usage</h3>
+              <div className="p-5 rounded-sm bg-black/40 border border-white/5 font-mono text-xs text-blue-300 overflow-x-auto">
+                <pre>{`// Terletak di src/components/landing/FeaturedVoucher.tsx
+import { FeaturedVoucher } from "@/components/landing/FeaturedVoucher";
+
+// Gunakan di luar container max-w jika ingin full-width background
+<FeaturedVoucher />`}</pre>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Right Sidebar - Simplified Navigation */}
@@ -219,6 +274,7 @@ import { HeroSlider } from "@/components/landing/HeroSlider";
                     { id: "overview", label: "Overview" },
                     { id: "hero-slider", label: "Hero Slider" },
                     { id: "explore-accounts", label: "Explore Accounts" },
+                    { id: "featured-voucher", label: "Featured Voucher" },
                   ].map((link) => (
                     <a
                       key={link.id}

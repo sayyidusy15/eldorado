@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { HeroSlider } from "@/components/landing/HeroSlider";
 import { ExploreAccounts } from "@/components/landing/ExploreAccounts";
+import { FeaturedVoucher } from "@/components/landing/FeaturedVoucher";
 
 export default function Home() {
   return (
@@ -23,12 +24,14 @@ export default function Home() {
       </div>
 
       {/* LANDING PAGE CONTENT CONTAINER (1100px) */}
-      <div className="relative z-10 max-w-[1100px] mx-auto pt-8 px-4 lg:px-0 space-y-16">
-        <HeroSlider />
-        
-        <ExploreAccounts />
-        
-        {/* Future sections will be added here as separate components in src/components/landing/ */}
+      <div className="relative z-10 space-y-16 pt-8">
+        <div className="max-w-[1100px] mx-auto px-4 lg:px-0 space-y-16">
+          <HeroSlider />
+          <ExploreAccounts />
+        </div>
+
+        {/* Full-width Section */}
+        <FeaturedVoucher />
       </div>
     </main>
   );
